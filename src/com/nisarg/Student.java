@@ -19,7 +19,7 @@ public class Student {
     EvaluationItem exam2;
 
     final double LAB_MAX_SCORE = 10;
-    final double ASSIGNMENT_MAX_SCORE = 10;
+    final double ASSIGNMENT_MAX_SCORE = 20;
     final double EXAMS_MAX_SCORE = 10;
 
     public Student() {
@@ -169,6 +169,22 @@ public class Student {
     }
 
 
+    public double calculateTotalAssignmentScore() {
+        double scoreTotal = assignment1.getScoreObtained() + assignment2.getScoreObtained() + assignment3.getScoreObtained() + assignment4.getScoreObtained();
+        return scoreTotal;
+    }
+
+    public double calculateAssignmentScorePercentage() {
+        double scoreTotal = calculateTotalAssignmentScore();
+        double totalMaxScore = assignment1.getMaxScore() +
+                assignment2.getMaxScore() +
+                assignment3.getMaxScore() +
+                assignment4.getMaxScore();
+
+        return (scoreTotal*100) / totalMaxScore;
+    }
+
+
     public String displauReportCard() {
         return "Student{" +
                 "studentName='" + studentName + '\'' +
@@ -184,6 +200,6 @@ public class Student {
                 ", assignment4=" + assignment4 +
                 ", exam1=" + exam1 +
                 ", exam2=" + exam2 +
-                '}';
+                '}' + "\n\n\n\n this is from report card" + calculateTotalAssignmentScore();
     }
 }

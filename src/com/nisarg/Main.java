@@ -26,16 +26,22 @@ public class Main {
         } while (lab2 > 10 || lab2 < 0);
 
 
-//
-//        Student student = new Student();
-//        student.setStudentName("Jay");
-//        student.setCourseName("Java");
-//        student.setLab1(5);
-//        student.setLab2(2);
-//        student.setLab3(1);
-//        student.setLab4(10);
-//        student.setAssignment1(11);
-//
+        Student student = new Student();
+        student.setStudentName("Jay");
+        student.setCourseName("Java");
+        student.setLab1(5);
+        student.setLab2(2);
+        student.setLab3(1);
+        student.setLab4(10);
+        student.setAssignment1(10);
+        student.setAssignment2(10);
+        student.setAssignment3(10);
+        student.setAssignment4(10);
+
+        System.out.println("total assignment score: " + student.calculateTotalAssignmentScore());
+        System.out.println(student.calculateTotalAssignmentScore());
+        System.out.println(student.calculateAssignmentScorePercentage());
+
 //        System.out.println(student.displauReportCard());
 
 
